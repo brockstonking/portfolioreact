@@ -1,0 +1,23 @@
+.singeProjectImg {
+    height: 400px;
+    border-radius: 20px;
+}
+
+.singleProjectParent {
+    margin-bottom: 20vh;
+    padding: 50px;
+    overflow: hidden;
+}
+
+.singleProjectText {
+    width: 40vw;
+    margin: auto;
+}
+
+.singleProjectDescription {
+    text-align: left;
+}
+
+.singleProjectTechnologies {
+    text-align: left;
+}

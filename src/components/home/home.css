@@ -67,10 +67,14 @@
     text-align: left;
 }
 
-.aboutMeHeader {
+.sectionHeader {
     width: 200px;
     margin: auto;
     margin-bottom: 5vh;
+}
+
+.skillsSection {
+    margin-bottom: 30vh;
 }
 
 .skillsBlock {
@@ -79,6 +83,7 @@
     width: 80%;
     margin: auto;
     justify-content: space-between;
+    margin-top: 100px;
 }
 
 .skillImageRound {
@@ -95,4 +100,21 @@
 
 .skillAndTitle {
     margin-bottom: 50px;
+}
+
+.downArrow {
+    cursor: pointer;
+    position: absolute;
+    right: calc(50% - 50px);
+}
+
+.projectsSingleAndButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectsButton {
+    height: 25px;
+    margin-top: 25%;
+    cursor: pointer;
 }

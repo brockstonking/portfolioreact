@@ -1,0 +1,98 @@
+.home {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.pictureBase {
+    position: absolute;
+    z-index: -10;
+    width: 101vw;
+    height: 100vh;
+    top: 0;
+    left: -10px;
+    overflow: hidden;
+}
+
+.portfolioOfName {
+    /* width: 24%; */
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 35vh;
+    background-color: #a25a33;
+    /* background-color: #00caea57; */
+    padding-left: 5px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 40px;
+}
+
+.portfolioOfDescriptionWords {
+    font-size: 30px;
+    /* width: 76%; */
+    margin: auto;
+    position: relative;
+    background-color: #a25a33;
+    /* background-color: #00caea57; */
+    padding-left: 15px;
+    font-weight: 450;
+    line-height: 1.5;
+}
+
+.upperSection {
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.profilePicture {
+    border-radius: 300px;
+    width: 300px;
+}
+
+.aboutMeSection {
+    margin-top: 70vh;
+    margin-bottom: 30vh;
+}
+
+.aboutMeContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.aboutMeWords {
+    margin: auto;
+    width: 60%;
+    font-size: 25px;
+    text-align: left;
+}
+
+.aboutMeHeader {
+    width: 200px;
+    margin: auto;
+    margin-bottom: 5vh;
+}
+
+.skillsBlock {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.skillImageRound {
+    border-radius: 100px;
+}
+
+.skillTitle {
+    margin: auto;
+}
+
+.skillImage {
+    height: 200px;
+}
+
+.skillAndTitle {
+    margin-bottom: 50px;
+}

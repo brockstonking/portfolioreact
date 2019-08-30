@@ -49,7 +49,8 @@ app.post('/api/sendmail', (req, res, next) => {
                 }
             });
 });
+const port = 3015;
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.port || port, () => {
     console.log(`Listening on port ${ port }`);
 })

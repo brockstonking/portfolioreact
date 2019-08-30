@@ -10,7 +10,9 @@ class Contact extends Component {
         this.state = {
             name: '',
             email: '',
-            message: ''
+            message: '',
+            showSent: false,
+            showSendError: false
         }
         this.send = this.send.bind( this );
     };
@@ -22,15 +24,49 @@ class Contact extends Component {
     }
 
     send () {
-        axios.post('http://localhost:3015/api/sendmail', { name: this.state.name, email: this.state.email, message: this.state.message })
-        .then( results => {
-            window.alert(results.data)
-        })
-        .catch( err => {
-            window.alert(err)
-        })
+        const { name, email, message } = this.state;
+        if (name && email && message) {
+            this.setState({
+                name: '',
+                email: '',
+                message: ''
+            })
+            axios.post('http://localhost:3015/api/sendmail', { name: this.state.name, email: this.state.email, message: this.state.message })
+            .then( results => {
+                this.setState({
+                    showSent: true
+                })
+                setTimeout(() => {
+                    this.setState({
+                        showSent: false
+                    })
+                }, 3000)
+            })
+            .catch( err => {
+                this.setState({
+                    showSendError: true
+                })
+                setTimeout(() => {
+                    this.setState({
+                        showSendError: false
+                    })
+                }, 4000)
+            })
+        } else {
+            window.alert('Please fill out all fields before sending')
+        }
     }   
     render () {
+        const sentAlert = this.state.showSent 
+        ? <div className='sentAlertBox'>
+            <p>Email sent!</p>
+        </div>
+        : <div></div>
+        const errorAlert = this.state.showSendError 
+        ? <div className='errorAlertBox'>
+            <p>Sorry, we couldn't send your message</p>
+        </div>
+        : <div></div>
         return (
             <div className='contactSection'>
                 <div className='contactDescription'>
@@ -42,6 +78,8 @@ class Contact extends Component {
                     <div className='contactInput'><textarea className='contactInputOnly' onChange={e => this.handleChange(e)} rows={8} value={this.state.message} name='message' placeholder='Message' /></div>
                     <Button onClick={() => this.send()}>Send message</Button>
                 </div>
+                { sentAlert }
+                { errorAlert }
             </div>
         )
     }

@@ -11,14 +11,14 @@ app.use(bodyParser.json());
 
 app.use(express.json());
 
-// app.use(express.static(path.join(__dirname, '/build')));
+app.use(express.static(path.join(__dirname, '/build')));
 
 
-// app.get('/*', (req, res) => {
-//   res.sendFile('index.html', {
-//     root: path.join(__dirname, "build")
-//   })
-// });
+app.get('/*', (req, res) => {
+  res.sendFile('index.html', {
+    root: path.join(__dirname, "build")
+  })
+});
 app.post('/api/sendmail', (req, res, next) => {
     const { sender, email, message } = req.body;
     var transporter = 

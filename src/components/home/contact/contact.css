@@ -1,0 +1,28 @@
+.contactSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20vh;
+}
+
+.contactDescriptionWords {
+    width: 50%;
+}
+
+.contactInput {
+    margin: 20px;
+}
+
+.contactInputOnly {
+    width: 100%;
+}
+
+.contactInputs {
+    width: 39%;
+}
+
+.contactDescription {
+    margin-top: 9%;
+}

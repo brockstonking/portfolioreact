@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import AboutMe from './aboutMe/aboutMe';
 import Skills from './skills/skills';
 import Projects from './projects/projects';
+import Contact from './contact/contact';
 
 class Home extends Component {
     constructor (props) {
@@ -49,16 +50,17 @@ class Home extends Component {
         }
         return (
             <Router>
-                <div class='home'>
-                    <div class='upperSection'>
-                        <h1 class='portfolioOfName'>Brockston King</h1>
-                        <p class='portfolioOfDescriptionWords' id='body'>energetic. creative. web developer. reliable. hardworking. me.</p>
-                        <img class='pictureBase' src='https://images.unsplash.com/photo-1561679660-1b9e82450a1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80' alt='' />
-                        <Link to="/pathLink#aboutMeSection"><img style={downArrowStyling} class='downArrow' src='https://www.freeiconspng.com/uploads/white-down-arrow-png-2.png' alt='' /></Link>
+                <div className='home'>
+                    <div className='upperSection'>
+                        <h1 className='portfolioOfName'>Brockston King</h1>
+                        <p className='portfolioOfDescriptionWords' id='body'>energetic. creative. web developer. reliable. hardworking. me.</p>
+                        <img className='pictureBase' src='https://images.unsplash.com/photo-1561679660-1b9e82450a1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80' alt='' />
+                        <Link to="/pathLink#aboutMeSection"><img style={downArrowStyling} className='downArrow' src='https://www.freeiconspng.com/uploads/white-down-arrow-png-2.png' alt='' /></Link>
                     </div>
                     <AboutMe />
                     <Skills />
                     <Projects />
+                    <Contact />
                 </div>
             </Router>
         )

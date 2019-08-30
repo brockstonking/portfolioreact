@@ -45,11 +45,13 @@
 .profilePicture {
     border-radius: 300px;
     width: 300px;
+    border: solid #a25a33 3px;
 }
 
 .aboutMeSection {
     margin-top: 70vh;
     margin-bottom: 30vh;
+    position: relative;
 }
 
 .aboutMeContent {
@@ -128,4 +130,75 @@
 .skillsColors {
     background-color: whitesmoke;
     padding-top: 50px;
+}
+
+/* .profilePictureContainer {
+    padding: 2px;
+    border-radius: 200px;
+    background-color: #a25a33;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+} */
+
+/* .aboutMeWords {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.aboutMeHeader {
+    color: #a25a33;
+}  */
+
+.colorBlockOne {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: #00bcd421;
+    z-index: -10;
+    left: -50px;
+    top: -70px;
+}
+
+.colorBlockTwo {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: #c8ad9866;
+    z-index: -10;
+    left: -10px;
+}
+
+.colorBlockThree {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: #00bcd421;
+    z-index: -10;
+    right: 50px;
+}
+
+.colorBlockFour {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: #c8ad9866;
+    z-index: -10;
+    right: 90px;
+    top: 2550px;
+}
+
+.linkedGithubLogos {
+    border-radius: 5px;
+    height: 40px;
+}
+
+.linkedinGithubDiv {
+    width: 7%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    position: absolute;
+    top: 25px;
+    right: 25px;
 }

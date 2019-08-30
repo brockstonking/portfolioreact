@@ -57,6 +57,8 @@ class Projects extends Component {
         ];
         return (
             <div className='projectsSection'>
+            <div className='colorBlockThree'></div>
+            <div className='colorBlockFour'></div>
                 <h1 className='sectionHeader'>Projects</h1>
                 <div className='projectsSingleAndButtons'>
                     <div className='projectsButton' onClick={ () => goForward() }><Button><ChevronLeftIcon /></Button></div>

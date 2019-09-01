@@ -31,7 +31,7 @@ class Contact extends Component {
                 email: '',
                 message: ''
             })
-            axios.post('http://localhost:3015/api/sendmail', { name: this.state.name, email: this.state.email, message: this.state.message })
+            axios.post('http://localhost:3015/api/sendmail', { sender: this.state.name, email: this.state.email, message: this.state.message })
             .then( results => {
                 this.setState({
                     showSent: true

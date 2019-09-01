@@ -4,6 +4,8 @@ require('dotenv').config();
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 
+const path = require('path');
+
 const app = express();
 
 
@@ -22,13 +24,16 @@ app.get('/*', (req, res) => {
 });
 app.post('/api/sendmail', (req, res, next) => {
     const { sender, email, message } = req.body;
-    var transporter = 
+
+        var transporter = 
+
+
     nodemailer.createTransport(
         {  
             service: 'gmail',  
             auth: {    
                 user: 'honorpurpose@gmail.com',    
-                pass: process.env.password
+                pass: 'bROCK303'
             }
         });
         var mailOptions = 
@@ -49,7 +54,7 @@ app.post('/api/sendmail', (req, res, next) => {
                     res.status(200).send('Email sent')
                 }
             });
-});
+    });
 const port = 3015;
 
 app.listen(process.env.port || port, () => {
